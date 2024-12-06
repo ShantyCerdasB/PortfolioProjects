@@ -1,0 +1,28 @@
+name: Node.js Deploy
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Paso 1: Checkout del código
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Paso 2: Configurar Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x # Cambia según la versión necesaria
+
+      # Paso 3: Instalar dependencias
+      - name: Install dependencies
+        run: npm install
+
+      # Paso 4: Ejecutar la aplicación
+      - name: Start application
+        run: npm start
