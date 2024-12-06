@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "java-script/server.js",
+  "scripts": {
+    "start": "node java-script/server.js",  
+    "dev": "nodemon java-script/server.js", 
+    "install-all": "npm install && npm install --save-dev nodemon" 
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemailer": "^6.9.16"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "author": "SCB",
+  "license": "ISC"
+}
